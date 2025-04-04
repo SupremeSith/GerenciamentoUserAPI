@@ -51,7 +51,23 @@ app.put('/usuarios/:id',async (req, res) => {
 })
 
 
+app.delete('/usuarios/:id',async (req, res) => {
 
+    // o id é o parametro que vem na url, ou seja, o id do usuario que queremos deletar
+    // o params é um objeto que contém os parametros da url
+
+    await prisma.user.delete({
+        where: {
+            id: req.params.id
+        }
+    })
+
+    // o status 200 indica que a requisição foi bem sucedida
+    // o json é um método que envia uma resposta em formato JSON
+
+    res.status(200).json({message: 'Usuario deletado com sucesso'})
+
+})
 
 
 
