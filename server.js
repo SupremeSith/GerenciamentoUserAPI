@@ -72,28 +72,36 @@ app.delete('/usuarios/:id',async (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
 // get retorna os usuarios
 // o get é usado para obter informações do servidor
 // o status 200 indica que a requisição foi bem sucedida
-app.get('/usuarios',async (req, res) => {
 
-    const users = await prisma.user.findMany()
+
+app.get('/usuarios', async (req, res) => {
+    let users = [];
+
+    if (req.query) {
+        users = await prisma.user.findMany({
+            where: {
+                name: req.query.name,
+                email: req.query.email,
+                age: req.query.age
+            }
+        });
+    } else {
+        users = await prisma.user.findMany()
+    }
 
 
     res.status(200).json(users)
-})
+
+});
+
+
+
 
 app.listen(3000)
-
-
+console.log('Servidor rodando na porta 3000')
 
 //usuario rodolfo
 // senha S4A3jnQTxpPYeedZ
