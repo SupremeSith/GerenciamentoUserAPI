@@ -27,6 +27,43 @@ app.post('/usuarios',async (req, res) => {
 })
 
 
+
+
+app.put('/usuarios/:id',async (req, res) => {
+
+// o id é o parametro que vem na url, ou seja, o id do usuario que queremos atualizar
+
+// o params é um objeto que contém os parametros da url
+
+    await prisma.user.update({
+        where: {
+            id: req.params.id
+        },
+        data: {
+            name: req.body.name,
+            email: req.body.email,
+            age: req.body.age
+        }
+    })
+
+
+    res.status(201).json(req.body)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // get retorna os usuarios
 // o get é usado para obter informações do servidor
 // o status 200 indica que a requisição foi bem sucedida
