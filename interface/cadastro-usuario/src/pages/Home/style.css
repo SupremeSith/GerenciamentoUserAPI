@@ -1,0 +1,87 @@
+/* userManagement.css */
+.container {
+  width: 100%;
+  max-width: 800px; /* Tamanho bom para o conteúdo */
+  margin: 0 auto;
+  padding: 1rem; /* Equivalente a p-4 no Tailwind */
+}
+
+form {
+  background-color: #ffffff;
+  padding: 1.5rem; /* Equivalente a p-6 */
+  border-radius: 0.5rem; /* Equivalente a rounded-lg */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalente a shadow-md */
+  margin-bottom: 1.5rem; /* Equivalente a mb-6 */
+}
+
+form h1 {
+  font-size: 1.5rem; /* Equivalente a text-2xl */
+  font-weight: bold; /* Equivalente a font-bold */
+  margin-bottom: 1rem; /* Equivalente a mb-4 */
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 0.5rem; /* Equivalente a p-2 */
+  border: 1px solid #d1d5db; /* Cor de borda padrão */
+  border-radius: 0.25rem; /* Equivalente a rounded */
+  margin-bottom: 1rem; /* Equivalente a mb-4 */
+  font-size: 1rem;
+}
+
+form input:focus {
+  border-color: #2563eb; /* Cor ao focar */
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+form button {
+  background-color: #2563eb; /* Equivalente a bg-blue-600 */
+  color: #ffffff; /* Equivalente a text-white */
+  padding: 0.5rem 1rem; /* Equivalente a p-2 */
+  border-radius: 0.25rem; /* Equivalente a rounded */
+  border: none;
+}
+
+form button:hover {
+  background-color: #1d4ed8; /* Equivalente a hover:bg-blue-700 */
+}
+
+.space-y-4 > div {
+  margin-bottom: 1rem; /* Espaçamento entre os itens da lista */
+}
+
+.space-y-4 > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 1rem; /* Equivalente a p-4 */
+  border-radius: 0.5rem; /* Equivalente a rounded-lg */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Equivalente a shadow-md */
+}
+
+.space-y-4 p {
+  font-size: 1.125rem; /* Equivalente a text-lg */
+  color: #374151;
+}
+
+.space-y-4 p span {
+  font-weight: 600; /* Equivalente a font-semibold */
+  color: #1f2937;
+}
+
+button.text-red-600 {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+button.text-red-600:hover {
+  color: #991b1b; /* Equivalente a hover:text-red-800 */
+}
+
+button.text-red-600 img {
+  width: 1.5rem; /* Equivalente a w-6 */
+  height: 1.5rem; /* Equivalente a h-6 */
+}
