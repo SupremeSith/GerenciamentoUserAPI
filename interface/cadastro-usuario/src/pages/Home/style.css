@@ -1,87 +1,116 @@
-/* userManagement.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+
 .container {
-  width: 100%;
-  max-width: 800px; /* Tamanho bom para o conteúdo */
+  max-width: 800px;
   margin: 0 auto;
-  padding: 1rem; /* Equivalente a p-4 no Tailwind */
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form {
   background-color: #ffffff;
-  padding: 1.5rem; /* Equivalente a p-6 */
-  border-radius: 0.5rem; /* Equivalente a rounded-lg */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalente a shadow-md */
-  margin-bottom: 1.5rem; /* Equivalente a mb-6 */
-}
-
-form h1 {
-  font-size: 1.5rem; /* Equivalente a text-2xl */
-  font-weight: bold; /* Equivalente a font-bold */
-  margin-bottom: 1rem; /* Equivalente a mb-4 */
-  color: #333;
-}
-
-form input {
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   width: 100%;
-  padding: 0.5rem; /* Equivalente a p-2 */
-  border: 1px solid #d1d5db; /* Cor de borda padrão */
-  border-radius: 0.25rem; /* Equivalente a rounded */
-  margin-bottom: 1rem; /* Equivalente a mb-4 */
-  font-size: 1rem;
+  max-width: 400px;
+  margin-bottom: 30px;
+  border: 1px solid #e5e7eb;
 }
 
-form input:focus {
-  border-color: #2563eb; /* Cor ao focar */
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
-}
-
-form button {
-  background-color: #2563eb; /* Equivalente a bg-blue-600 */
-  color: #ffffff; /* Equivalente a text-white */
-  padding: 0.5rem 1rem; /* Equivalente a p-2 */
-  border-radius: 0.25rem; /* Equivalente a rounded */
-  border: none;
-}
-
-form button:hover {
-  background-color: #1d4ed8; /* Equivalente a hover:bg-blue-700 */
-}
-
-.space-y-4 > div {
-  margin-bottom: 1rem; /* Espaçamento entre os itens da lista */
-}
-
-.space-y-4 > div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #ffffff;
-  padding: 1rem; /* Equivalente a p-4 */
-  border-radius: 0.5rem; /* Equivalente a rounded-lg */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Equivalente a shadow-md */
-}
-
-.space-y-4 p {
-  font-size: 1.125rem; /* Equivalente a text-lg */
+h1 {
+  text-align: center;
   color: #374151;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
 }
 
-.space-y-4 p span {
-  font-weight: 600; /* Equivalente a font-semibold */
-  color: #1f2937;
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #f9fafb;
+  font-family: 'Poppins', sans-serif;
 }
 
-button.text-red-600 {
-  background: none;
+input:focus {
+  outline: none;
+  border-color: #6b7280;
+  box-shadow: 0 0 5px rgba(107, 114, 128, 0.2);
+}
+
+button[type="button"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #6b7280;
+  color: white;
   border: none;
-  padding: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s;
 }
 
-button.text-red-600:hover {
-  color: #991b1b; /* Equivalente a hover:text-red-800 */
+
+
+.users-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-button.text-red-600 img {
-  width: 1.5rem; /* Equivalente a w-6 */
-  height: 1.5rem; /* Equivalente a h-6 */
+.card {
+  width: 100%;
+  height: 100px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  background-color: #374151;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+
+.card p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card button {
+  max-width:max-content;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 30px;
+    transition: opacity 1.0;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+.card img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    filter: invert(40%) sepia(10%) saturate(200%) hue-rotate(180deg) brightness(90%) contrast(90%); /* Grayish tone */
 }
