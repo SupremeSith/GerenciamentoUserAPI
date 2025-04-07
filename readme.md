@@ -80,18 +80,5 @@ Node.js é uma plataforma que permite executar JavaScript no lado do servidor. E
    ```
 2. Acesse a aplicação em `http://localhost:<PORT>`.
 
-## 📝 Padrão de README
-
-1. **Título**: Nome do projeto.
-2. **Introdução**: Breve descrição do projeto.
-3. **Teoria**: Explicação dos conceitos utilizados.
-4. **Funcionalidades**: Lista das principais funcionalidades.
-5. **Explicação do Código**: Tecnologias, estrutura e funcionamento.
-6. **Procedimento Padrão**: Instruções de instalação e execução.
-7. **Licença** (se aplicável): Informações sobre os direitos autorais.
-
-## 📌 Considerações Finais
-
-Este README foi estruturado para fornecer uma visão clara e detalhada do projeto. Sinta-se à vontade para personalizá-lo conforme necessário.
 
 
