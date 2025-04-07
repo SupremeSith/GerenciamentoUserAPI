@@ -61,7 +61,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 20px;
   font-family: 'Poppins', sans-serif;
   margin-left: 60px;
@@ -75,4 +74,109 @@ h1 {
   font-size: 28px;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
+}
+
+/* Table Actions */
+.table-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.action-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button.create {
+  background-color: #6b7280;
+  color: white;
+  text-decoration: none;
+}
+
+.action-button.create:hover {
+  background-color: #4b5563;
+}
+
+.action-button.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.action-button.delete:hover {
+  background-color: #c82333;
+}
+
+.action-button.delete:disabled {
+  background-color: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.action-button.export {
+  background-color: #28a745;
+  color: white;
+}
+
+.action-button.export:hover {
+  background-color: #218838;
+}
+
+/* Table Styles */
+.table-container {
+  width: 100%;
+  max-width: 800px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f9fafb;
+  color: #374151;
+  font-weight: 600;
+}
+
+td {
+  border-top: 1px solid #e5e7eb;
+  color: #4b5563;
+}
+
+tr:hover {
+  background-color: #f9fafb;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
 }
