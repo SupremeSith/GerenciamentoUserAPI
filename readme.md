@@ -1,158 +1,123 @@
-# NodeProject
+# Cadastro de Usuários 📋
 
-## Descrição do Projeto
+![Banner do Projeto](https://via.placeholder.com/1200x300.png?text=Cadastro+de+Usu%C3%A1rios)
 
-O **NodeProject** é uma aplicação completa que combina um backend robusto desenvolvido em Node.js com um frontend interativo e responsivo. Este projeto foi projetado para ser escalável, eficiente e fácil de manter, utilizando as melhores práticas de desenvolvimento.
+**Cadastro de Usuários** é um sistema web completo para gerenciamento de usuários, projetado para ser simples, eficiente e escalável. Ele combina um **frontend** moderno em React com um **backend** robusto em Node.js, utilizando Prisma para interação com o banco de dados. O projeto permite cadastrar, visualizar, excluir e exportar dados de usuários, com uma interface amigável e um design profissional.
 
-## Estrutura do Projeto
+O sistema conta com uma sidebar expansível para navegação, um formulário de cadastro, uma tabela interativa para visualização de dados, e funcionalidades como exclusão em massa e exportação para CSV. O design utiliza a fonte Poppins e uma paleta de cores em tons de cinza e branco, garantindo uma experiência visual limpa e agradável.
 
-A estrutura do projeto é organizada da seguinte forma:
+## Badges 🏆
 
-```
-NodeProject/
-├── backend/
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── services/
-│   │   └── utils/
-│   ├── config/
-│   ├── tests/
-│   └── server.js
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── utils/
-│   ├── tests/
-│   └── index.js
-└── readme.md
-```
+![GitHub repo size](https://img.shields.io/github/repo-size/woofportocarrero/CADASTRO-USUARIO)
+![GitHub last commit](https://img.shields.io/github/last-commit/woofportocarrero/CADASTRO-USUARIO)
+![License](https://img.shields.io/github/license/woofportocarrero/CADASTRO-USUARIO)
+![Node.js](https://img.shields.io/badge/Node.js-v16+-green)
+![React](https://img.shields.io/badge/React-v18-blue)
+![Prisma](https://img.shields.io/badge/Prisma-v5-blue)
 
-## Tecnologias Utilizadas
+## Menu 📑
 
-### Backend
-- **Node.js**: Plataforma para execução do JavaScript no servidor.
-- **Express.js**: Framework para criação de APIs RESTful.
-- **MongoDB**: Banco de dados NoSQL para armazenamento de dados.
-- **Mongoose**: ODM para modelagem de dados no MongoDB.
-- **Jest**: Framework de testes para garantir a qualidade do código.
+- [Sobre o Projeto](#sobre-o-projeto-ℹ️)
+- [Funcionalidades](#funcionalidades-🚀)
+- [Demonstração](#demonstração-📷)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas-🛠️)
+- [Estrutura do Projeto](#estrutura-do-projeto-📂)
+- [Instalação](#instalação-📦)
+- [Uso](#uso-📡)
+- [Endpoints da API](#endpoints-da-api-🖥️)
+- [Estrutura do Banco de Dados](#estrutura-do-banco-de-dados-prisma-🧩)
+- [Estilização e Design](#estilização-e-design-🎨)
+- [Testes](#testes-🧪)
+- [Contribuindo](#contribuindo-🤝)
+- [Reportando Bugs](#reportando-bugs-🐛)
+- [Licença](#licença-📜)
+- [Contato](#contato-📞)
 
-### Frontend
-- **React.js**: Biblioteca para construção de interfaces de usuário.
-- **Axios**: Biblioteca para requisições HTTP.
-- **React Router**: Gerenciamento de rotas no frontend.
-- **CSS Modules**: Estilização modular e reutilizável.
-- **Jest + React Testing Library**: Testes unitários e de integração.
+## Sobre o Projeto ℹ️
 
-## Funcionalidades
+O **Cadastro de Usuários** é um projeto full-stack desenvolvido para gerenciar informações de usuários de forma eficiente. Ele foi criado com o objetivo de oferecer uma solução prática para operações CRUD (Create, Read, Update, Delete), com foco em usabilidade e design. O sistema é ideal para aplicações que precisam de um gerenciamento básico de usuários, como sistemas internos, CRMs ou ferramentas administrativas.
 
-### Backend
-- **Autenticação e Autorização**: Sistema de login com JWT.
-- **CRUD Completo**: Operações de criação, leitura, atualização e exclusão de dados.
-- **Validação de Dados**: Middleware para validação de entradas.
-- **Logs e Monitoramento**: Logs detalhados para auditoria e monitoramento.
+O projeto é dividido em duas partes principais:
+- **Frontend**: Uma interface React com duas páginas principais: uma para cadastro de usuários e outra para visualização em tabela.
+- **Backend**: Uma API RESTful em Node.js com Express, que utiliza Prisma para interagir com o banco de dados.
+
+## Funcionalidades 🚀
+
+### Geral
+- **🌐 Navegação Intuitiva**: Sidebar expansível com ícones para alternar entre as páginas de cadastro e tabela.
+- **📱 Design Responsivo**: Interface adaptada para diferentes tamanhos de tela.
+- **💾 Exportação de Dados**: Exporta os dados da tabela para um arquivo CSV, ideal para relatórios empresariais.
 
 ### Frontend
-- **Interface Responsiva**: Design adaptável para diferentes dispositivos.
-- **Consumo de APIs**: Integração com o backend para exibição e manipulação de dados.
-- **Gerenciamento de Estado**: Utilização de hooks e context API.
-- **Feedback ao Usuário**: Mensagens de erro e sucesso em tempo real.
-
-## Como Executar o Projeto
-
-### Pré-requisitos
-- Node.js (v16 ou superior)
-- MongoDB (instância local ou em nuvem)
-- Gerenciador de pacotes (npm ou yarn)
-
-### Passos para Executar
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/SupremeSith/GerenciamentoUserAPI.git
-   cd NodeProject
-   ```
-
-2. Configure as variáveis de ambiente:
-   - Crie um arquivo `.env` na pasta `backend` com as seguintes variáveis:
-     ```
-     PORT=5000
-     MONGO_URI=sua-string-de-conexão
-     JWT_SECRET=sua-chave-secreta
-     ```
-
-3. Instale as dependências:
-   ```bash
-   # Backend
-   cd backend
-   npm install
-
-   # Frontend
-   cd ../frontend
-   npm install
-   ```
-
-4. Inicie o servidor backend:
-   ```bash
-   cd backend
-   npm start
-   ```
-
-5. Inicie o servidor frontend:
-   ```bash
-   cd ../frontend
-   npm start
-   ```
-
-6. Acesse a aplicação:
-   - Frontend: `http://localhost:3000`
-   - Backend: `http://localhost:5000`
-
-## Testes
+- **📝 Cadastro de Usuários**: Formulário para adicionar novos usuários com campos para nome, email e idade.
+- **📊 Visualização em Tabela**: Tabela interativa com colunas para ID, Nome, Email, Idade e Ações.
+- **🗑️ Exclusão de Usuários**:
+  - Exclusão individual com confirmação via modal.
+  - Exclusão em massa selecionando múltiplos usuários.
+- **🔗 Integração com API**: Consumo da API para exibir e manipular dados.
+- **🔔 Feedback ao Usuário**: Modal de confirmação para exclusão e botões desabilitados quando necessário.
 
 ### Backend
-Execute os testes unitários e de integração:
-```bash
-cd backend
-npm test
-```
+- **🌐 API RESTful**: Endpoints para criar, listar, atualizar e deletar usuários.
+- **✅ Validação de Dados**: Recebe e valida dados enviados pelo frontend.
+- **🗄️ Banco de Dados**: Integração com Prisma para operações no banco.
+
+## Demonstração 📷
+
+### Tela de Cadastro
+![Tela de Cadastro](https://via.placeholder.com/800x400.png?text=Tela+de+Cadastro)  
+_Formulário para adicionar novos usuários com uma sidebar à esquerda._
+
+### Tabela de Usuários
+![Tabela de Usuários](https://via.placeholder.com/800x400.png?text=Tabela+de+Usu%C3%A1rios)  
+_Tabela com opções de exclusão e exportação, e navegação via sidebar._
+
+> **Nota**: Substitua as imagens acima por capturas de tela reais do seu projeto para uma melhor apresentação.
+
+## Tecnologias Utilizadas 🛠️
 
 ### Frontend
-Execute os testes do frontend:
-```bash
-cd frontend
-npm test
-```
+- **React** v18: Biblioteca JavaScript para construção de interfaces.
+- **React Router** v6: Gerenciamento de rotas para navegação entre páginas.
+- **Axios**: Cliente HTTP para comunicação com a API.
+- **CSS**: Estilização personalizada com a fonte Poppins e tema em tons de cinza/branco.
 
-## Contribuição
+### Backend
+- **Node.js** v16+: Ambiente de execução JavaScript no lado do servidor.
+- **Express**: Framework para criação de APIs RESTful.
+- **Prisma** v5: ORM para interação com o banco de dados.
+- **CORS**: Middleware para permitir requisições entre origens diferentes.
 
-Contribuições são bem-vindas! Siga os passos abaixo para contribuir:
+### Ferramentas e Dependências
+- **Vite**: Ferramenta de build para o frontend, garantindo um desenvolvimento rápido.
+- **ESLint**: Para linting e manutenção da qualidade do código.
+- **Git**: Controle de versão.
 
-1. Faça um fork do repositório.
-2. Crie uma branch para sua feature:
-   ```bash
-   git checkout -b minha-feature
-   ```
-3. Faça commit das suas alterações:
-   ```bash
-   git commit -m "Minha nova feature"
-   ```
-4. Envie para o repositório remoto:
-   ```bash
-   git push origin minha-feature
-   ```
-5. Abra um Pull Request.
+## Estrutura do Projeto 📂
 
-## Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
-## Contato
-
-Para dúvidas ou sugestões, entre em contato:
-- **Email**: woof.portocarrero@gmail.com
-- **GitHub**: (https://github.com/SupremeSith)
+```plaintext
+/CADASTRO-USUARIO
+├── node_modules/
+├── public/
+├── src/
+│   ├── assets/
+│   │   └── trash-red-icon.svg        # Ícone SVG para o botão de exclusão
+│   ├── pages/
+│   │   ├── home/
+│   │   │   ├── index.jsx             # Componente da página de cadastro
+│   │   │   └── style.css             # Estilos específicos para a página de cadastro
+│   │   └── table/
+│   │       ├── index.jsx             # Componente da página de tabela
+│   │       └── style.css             # Estilos específicos para a página de tabela
+│   ├── services/
+│   │   └── api.js                    # Configuração do Axios para comunicação com a API
+│   ├── index.css                     # Estilos globais
+│   └── main.jsx                      # Ponto de entrada do React com configuração de rotas
+├── server.js                         # Arquivo principal do backend (Node.js/Express)
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+└── vite.config.js
